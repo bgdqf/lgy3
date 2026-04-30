@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>首页 - 精英英语辅导班</title>
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/custom.css">
+  <style>
+    /* 卡片背景遮罩 */
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* 半透明黑色，文字更清晰 */
+}
+
+/* 卡片hover动效 */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important;
+}
+
+/* 保证文字层级在遮罩之上 */
+.z-1 {
+  z-index: 1;
+}
+  </style>
+</head>
+<body>
+
+<!-- 导航栏 -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">精英英语</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html">首页</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="course.html">课程介绍</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="teacher.html">师资团队</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="gallery.html">学员风采</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">联系我们</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- 轮播图 -->
+<div id="carousel" class="carousel slide mt-5" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="images/10.jpg" class="d-block w-100" alt="banner1">
+      <div class="carousel-caption d-none d-md-block">
+        
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="images/11.jpg" class="d-block w-100" alt="banner2">
+    </div>
+    <div class="carousel-item">
+      <img src="images/12.jpg" class="d-block w-100" alt="banner3">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+    <span class="carousel-control-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+    <span class="carousel-control-icon"></span>
+  </button>
+</div>
+
+<!-- 机构简介 -->
+<section class="py-5">
+  <div class="container text-center">
+    <h2 class="mb-4">关于精英英语辅导班</h2>
+    <p class="lead">我们专注于中小学英语辅导、口语提升、考级冲刺，采用趣味互动教学，让孩子轻松爱上英语。</p>
+    <a href="course.html" class="btn btn-primary mt-3">查看热门课程</a>
+  </div>
+</section>
+
+<!-- 四大核心优势 -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5 fw-bold">核心优势</h2>
+    <div class="row g-4">
+      <!-- 卡片1：资深师资 -->
+      <div class="col-lg-3 col-md-6 col-12">
+        <div class="card h-100 border-0 rounded-3 shadow-sm text-white" 
+             style="background: url('images/16.jpg') center/cover no-repeat;">
+          <!-- 半透明遮罩，保证文字可读性 -->
+          <div class="card-overlay rounded-3"></div>
+          <div class="card-body p-4 text-center position-relative z-1">
+            <h4 class="fw-bold mb-3">资深师资</h4>
+            <p class="mb-0">全部持证上岗，多年教学经验</p>
+          </div>
+        </div>
+      </div>
+      <!-- 卡片2：小班教学 -->
+      <div class="col-lg-3 col-md-6 col-12">
+        <div class="card h-100 border-0 rounded-3 shadow-sm text-white" 
+             style="background: url('images/17.jpg') center/cover no-repeat;">
+          <div class="card-overlay rounded-3"></div>
+          <div class="card-body p-4 text-center position-relative z-1">
+            <h4 class="fw-bold mb-3">小班教学</h4>
+            <p class="mb-0">每班不超过10人，关注每位学生</p>
+          </div>
+        </div>
+      </div>
+      <!-- 卡片3：高效提分 -->
+      <div class="col-lg-3 col-md-6 col-12">
+        <div class="card h-100 border-0 rounded-3 shadow-sm text-white" 
+             style="background: url('images/18.jpg') center/cover no-repeat;">
+          <div class="card-overlay rounded-3"></div>
+          <div class="card-body p-4 text-center position-relative z-1">
+            <h4 class="fw-bold mb-3">高效提分</h4>
+            <p class="mb-0">科学体系，短期见效</p>
+          </div>
+        </div>
+      </div>
+      <!-- 卡片4：舒适环境 -->
+      <div class="col-lg-3 col-md-6 col-12">
+        <div class="card h-100 border-0 rounded-3 shadow-sm text-white" 
+             style="background: url('images/19.jpg') center/cover no-repeat;">
+          <div class="card-overlay rounded-3"></div>
+          <div class="card-body p-4 text-center position-relative z-1">
+            <h4 class="fw-bold mb-3">舒适环境</h4>
+            <p class="mb-0">明亮教室，多媒体教学</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- 页脚 -->
+<footer class="bg-dark text-white py-4 mt-5">
+  <div class="container text-center">
+    <p>精英英语辅导班 © 2026 版权所有</p>
+    <p>地址：四平市铁西区 | 电话：13756885627 | 备案号：粤ICP备12345678</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- 回到顶部按钮 JS -->
+<script>
+let topBtn = null;
+window.onscroll = function () {
+  if (!topBtn) {
+    topBtn = document.createElement("button");
+    topBtn.className = "btn btn-primary fixed-bottom m-3 me-3 rounded-circle";
+    topBtn.style.width = "50px";
+    topBtn.style.height = "50px";
+    topBtn.style.fontSize = "22px";
+    topBtn.innerText = "↑";
+    topBtn.onclick = () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+  }
+
+  if (window.scrollY > 300) {
+    if (!topBtn.parentNode) document.body.appendChild(topBtn);
+  } else {
+    if (topBtn.parentNode) topBtn.parentNode.removeChild(topBtn);
+  }
+};
+</script>
+</body>
+</html>

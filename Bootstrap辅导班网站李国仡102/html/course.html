@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>课程介绍 - 精英英语辅导班</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/custom.css">
+</head>
+<body>
+
+<!-- 导航栏 -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">精英英语</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">首页</a>
+        </li>
+        <li class="nav-item">
+          <!-- 这里给当前页course加上active -->
+          <a class="nav-link active" href="course.html">课程介绍</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="teacher.html">师资团队</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="gallery.html">学员风采</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">联系我们</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<section class="py-5 mt-5">
+  <div class="container">
+    <h2 class="text-center mb-5">课程介绍</h2>
+    <div class="row g-4">
+      <!-- 课程1 -->
+      <div class="col-lg-4 col-md-6 col-12">
+        <div class="card h-100">
+          <img src="images/13.jpg" class="card-img-top" alt="课程">
+          <div class="card-body">
+            <h5>少儿英语启蒙班</h5>
+            <p>适合年龄：4-7岁</p>
+            <p>课时：40节 / 学费：2800元</p>
+            <p>趣味动画、口语启蒙、自然拼读</p>
+          </div>
+        </div>
+      </div>
+      <!-- 课程2 -->
+      <div class="col-lg-4 col-md-6 col-12">
+        <div class="card h-100">
+          <img src="images/14.jpg" class="card-img-top" alt="课程">
+          <div class="card-body">
+            <h5>小学英语提分班</h5>
+            <p>适合年龄：7-12岁</p>
+            <p>课时：48节 / 学费：3200元</p>
+            <p>语法精讲、单词速记、同步教材</p>
+          </div>
+        </div>
+      </div>
+      <!-- 课程3 -->
+      <div class="col-lg-4 col-md-6 col-12">
+        <div class="card h-100">
+          <img src="images/15.jpg" class="card-img-top" alt="课程">
+          <div class="card-body">
+            <h5>初中英语冲刺班</h5>
+            <p>适合年龄：12-15岁</p>
+            <p>课时：50节 / 学费：3600元</p>
+            <p>中考考点、阅读写作、真题训练</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-dark text-white py-4">
+  <div class="container text-center">
+    <p>精英英语辅导班 © 2026 版权所有</p>
+    <p>地址：四平市铁西区 | 电话：13756885627 | 备案号：粤ICP备12345678</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- 回到顶部按钮 JS -->
+<script>
+let topBtn = null;
+window.onscroll = function () {
+  if (!topBtn) {
+    topBtn = document.createElement("button");
+    topBtn.className = "btn btn-primary fixed-bottom m-3 me-3 rounded-circle";
+    topBtn.style.width = "50px";
+    topBtn.style.height = "50px";
+    topBtn.style.fontSize = "22px";
+    topBtn.innerText = "↑";
+    topBtn.onclick = () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+  }
+
+  if (window.scrollY > 300) {
+    if (!topBtn.parentNode) document.body.appendChild(topBtn);
+  } else {
+    if (topBtn.parentNode) topBtn.parentNode.removeChild(topBtn);
+  }
+};
+</script>
+
+</body>
+</html>
