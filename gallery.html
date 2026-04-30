@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>学员风采 - 精英英语辅导班</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/custom.css">
+ <style>    
+    /* 学员风采图片浮动效果 */
+.gallery-img {
+  /* 初始状态：定位+过渡 */
+  position: relative;
+  transition: all 0.4s ease-in-out; /* 动画时长0.4秒，更丝滑 */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* 初始轻微阴影 */
+}
+
+/* 悬浮效果：浮动+缩放+加深阴影 */
+.gallery-img:hover {
+  transform: translateY(-10px) scale(1.05); /* 向上浮动10px + 缩放1.05倍 */
+  box-shadow: 0 12px 20px rgba(0,0,0,0.18); /* 加深阴影，增强立体感 */
+  z-index: 10; /* 浮动时覆盖下方元素，避免遮挡 */
+}
+
+/* 兼容其他页面的图片（如课程/师资页） */
+.card-img-top, 
+.teacher-avatar {
+  transition: all 0.3s ease;
+}
+.card-img-top:hover,
+.teacher-avatar:hover {
+  transform: translateY(-5px) scale(1.02); /* 轻微浮动，适配卡片内图片 */
+}
+ </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">精英英语</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">首页</a></li>
+        <li class="nav-item"><a class="nav-link" href="course.html">课程介绍</a></li>
+        <li class="nav-item"><a class="nav-link" href="teacher.html">师资团队</a></li>
+        <li class="nav-item"><a class="nav-link active" href="gallery.html">学员风采</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">联系我们</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="py-5 mt-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5 fw-bold">学员风采</h2>
+    <div class="row g-4">
+      <!-- 图片1 -->
+      <div class="col-lg-3 col-md-4 col-6">
+        <img src="../images/28.png" class="img-fluid rounded gallery-img" >
+      </div>
+      <!-- 图片2 -->
+      <div class="col-lg-3 col-md-4 col-6">
+        <img src="../images/23.png" class="img-fluid rounded gallery-img">
+      </div>
+      <!-- 图片3 -->
+      <div class="col-lg-3 col-md-4 col-6">
+        <img src="../images/24.png" class="img-fluid rounded gallery-img" >
+      </div>
+      <!-- 图片4 -->
+      <div class="col-lg-3 col-md-4 col-6">
+        <img src="../images/25.png" class="img-fluid rounded gallery-img" >
+      </div>
+      <!-- 图片5 -->
+      <div class="col-lg-3 col-md-4 col-6">
+        <img src="../images/26.png" class="img-fluid rounded gallery-img" >
+      </div>
+      <!-- 图片6 -->
+      <div class="col-lg-3 col-md-4 col-6">
+        <img src="../images/27.png" class="img-fluid rounded gallery-img" >
+      </div>
+      <div class="col-lg-3 col-md-4 col-6">
+        <img src="../images/29.png" class="img-fluid rounded gallery-img" >
+      </div>
+      <div class="col-lg-3 col-md-4 col-6">
+        <img src="../images/30.png" class="img-fluid rounded gallery-img" >
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-dark text-white py-4">
+  <div class="container text-center">
+    <p>精英英语辅导班 © 2026 版权所有</p>
+    <p>地址：四平市铁西区 | 电话：13756885627 | 备案号：粤ICP备12345678</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- 回到顶部按钮 JS -->
+<script>
+let topBtn = null;
+window.onscroll = function () {
+  if (!topBtn) {
+    topBtn = document.createElement("button");
+    topBtn.className = "btn btn-primary fixed-bottom m-3 me-3 rounded-circle";
+    topBtn.style.width = "50px";
+    topBtn.style.height = "50px";
+    topBtn.style.fontSize = "22px";
+    topBtn.innerText = "↑";
+    topBtn.onclick = () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+  }
+
+  if (window.scrollY > 300) {
+    if (!topBtn.parentNode) document.body.appendChild(topBtn);
+  } else {
+    if (topBtn.parentNode) topBtn.parentNode.removeChild(topBtn);
+  }
+};
+</script>
+</body>
+</html> 
+ 
